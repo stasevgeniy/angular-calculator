@@ -1,4 +1,15 @@
-# Angular.Loc
+A simple angular calculator with Angular 4
+============================
+
+## Application can : 
+- Add, subtract, divide, multiply numbers
+- handle errors
+
+## For this application, no css frameworks were used
+
+![stack Overflow](screen.jpg)
+
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0.
 
