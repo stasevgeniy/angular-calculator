@@ -3,18 +3,42 @@
   <h1>
     Welcome to {{title}}!
   </h1>
-  <img width="300" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+  <img width="150" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
-
+<div class="main">
+  <div class="calculator">
+    <div>
+      <div class="display">{{ status }}</div>
+      <div class="sub">{{ description }}</div>
+    </div>
+    <div>
+      <div>
+        <div>
+          <div class="btn" (click)="getNumbers('7')">7</div>
+          <div class="btn" (click)="getNumbers('8')">8</div>
+          <div class="btn" (click)="getNumbers('9')">9</div>
+          <div class="btn" (click)="selectOperator('/')" id="division">/</div>
+        </div>
+        <div>
+          <div class="btn" (click)="getNumbers('4')">4</div>
+          <div class="btn" (click)="getNumbers('5')">5</div>
+          <div class="btn" (click)="getNumbers('6')">6</div>
+          <div class="btn" (click)="selectOperator('*')" id="multiplication">X</div>
+        </div>
+        <div>
+          <div class="btn" (click)="getNumbers('1')">1</div>
+          <div class="btn" (click)="getNumbers('2')">2</div>
+          <div class="btn" (click)="getNumbers('3')">3</div>
+          <div class="btn" (click)="selectOperator('+')" id="addition">+</div>
+        </div>
+        <div>
+          <div class="btn" (click)="getNumbers('0')">0</div>
+          <div class="btn" (click)="getNumbers('.')">.</div>
+          <span class="btn" id="equalTo" (click)="showResult()">=</span>
+          <div class="btn" (click)="selectOperator('-')" id="subtraction">-</div>
+        </div>
+      </div>
+    </div>
+    <div (click)="Calculate()" id="calculate"></div>
+  </div>
+</div>
